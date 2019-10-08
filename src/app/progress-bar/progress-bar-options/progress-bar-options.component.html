@@ -1,0 +1,5 @@
+<p>Select colour:</p>
+<div *ngFor="let colour of colours">
+    <input type="radio" name="colour" (change)="changeColor(inputColor)" value="{{colour}}" #inputColor>
+    <label>{{ colour }}</label>
+</div>
