@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { ProgressBarService } from '../progress-bar-service';
 
@@ -9,7 +9,8 @@ import { ProgressBarService } from '../progress-bar-service';
 })
 export class ProgressBarComponent implements OnInit {
 
-  selectedColor;  
+  @Input() public progress;
+  selectedColor;
 
   constructor(public progressBarService: ProgressBarService) { }
 
@@ -20,8 +21,5 @@ export class ProgressBarComponent implements OnInit {
     console.log(color);
     this.selectedColor = color;
   }
-
-  
-  
 
 }
